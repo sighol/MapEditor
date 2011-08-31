@@ -1,0 +1,5 @@
+# Wall 0,0,255
+$ Player 255,0,0
+@ Box 0,255,0
+* BoxOnTarget 80,120,150
+. Target 255,30,140

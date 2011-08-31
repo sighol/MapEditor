@@ -1,0 +1,7 @@
+e Empty 255,255,255
+u Exit 255,0,0
+s Entry 255,0,255
+g Ground 0,0,0
+A MonsterA 23,53,123
+B MonsterB 65,87,23
+C MonsterC 0,0,250
