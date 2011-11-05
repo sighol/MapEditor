@@ -1,9 +1,4 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/*
  * LevelTextPanel.java
  *
  * Created on May 22, 2011, 3:21:39 PM

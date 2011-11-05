@@ -1,9 +1,4 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/*
  * MainFrame.java
  *
  * Created on May 23, 2011, 4:42:01 PM
