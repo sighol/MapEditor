@@ -1,9 +1,4 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/*
  * ReplaceCharFrame.java
  *
  * Created on May 28, 2011, 4:14:03 PM
@@ -30,22 +25,22 @@ public class ReplaceCharFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        labelTitle = new javax.swing.JLabel();
+        labelFind = new javax.swing.JLabel();
         textFind = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        labelReplace = new javax.swing.JLabel();
         textReplace = new javax.swing.JTextField();
         buttonCancel = new javax.swing.JButton();
         buttonReplace = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        jLabel1.setText("Replace char");
+        labelTitle.setFont(new java.awt.Font("Ubuntu", 1, 18));
+        labelTitle.setText("Replace char");
 
-        jLabel2.setText("Find");
+        labelFind.setText("Find");
 
-        jLabel3.setText("Replace");
+        labelReplace.setText("Replace");
 
         buttonCancel.setText("Cancel");
 
@@ -65,8 +60,8 @@ public class ReplaceCharFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2))
+                            .addComponent(labelReplace)
+                            .addComponent(labelFind))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(textReplace)
@@ -75,21 +70,21 @@ public class ReplaceCharFrame extends javax.swing.JFrame {
                         .addComponent(buttonCancel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                         .addComponent(buttonReplace))
-                    .addComponent(jLabel1))
+                    .addComponent(labelTitle))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(labelTitle)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
+                    .addComponent(labelFind)
                     .addComponent(textFind, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
+                    .addComponent(labelReplace)
                     .addComponent(textReplace, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -102,16 +97,16 @@ public class ReplaceCharFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
 	private void buttonReplaceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonReplaceActionPerformed
-
+		//TODO skrive inn kode her
 		
 	}//GEN-LAST:event_buttonReplaceActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonCancel;
     private javax.swing.JButton buttonReplace;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel labelFind;
+    private javax.swing.JLabel labelReplace;
+    private javax.swing.JLabel labelTitle;
     private javax.swing.JTextField textFind;
     private javax.swing.JTextField textReplace;
     // End of variables declaration//GEN-END:variables

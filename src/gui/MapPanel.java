@@ -1,9 +1,4 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/*
  * MapPanel.java
  *
  * Created on May 23, 2011, 4:33:46 PM
@@ -35,9 +30,8 @@ public class MapPanel extends javax.swing.JPanel implements MapListener {
 
 	/** Creates new form MapPanel */
 	public MapPanel() {
-
 	}
-	
+
 	public void init(MapEditor editor, MainFrame frame) {
 		this.editor = editor;
 		this.frame = frame;
@@ -47,8 +41,6 @@ public class MapPanel extends javax.swing.JPanel implements MapListener {
 		initCellSize();
 		map.addMapEditorListener(this);
 		initComponents();
-		
-		
 	}
 
 	@Override
@@ -58,8 +50,7 @@ public class MapPanel extends javax.swing.JPanel implements MapListener {
 		if (mapMatrix != null) {
 			paintMap(g);
 		} else {
-			System.out
-					.println("MapPanel.paintComponent()," + " (mapMatrix == null) = " + (mapMatrix == null));
+			System.out.println("MapPanel.paintComponent()," + " (mapMatrix == null) = " + (mapMatrix == null));
 		}
 	}
 
@@ -103,10 +94,8 @@ public class MapPanel extends javax.swing.JPanel implements MapListener {
 
 	@Override
 	public void mapChanged(Map editor, String property) {
-			mapMatrix = this.map.toCharMatrix();
-			initCellSize();
-
-		
+		mapMatrix = this.map.toCharMatrix();
+		initCellSize();
 		repaint();
 	}
 
@@ -150,12 +139,13 @@ public class MapPanel extends javax.swing.JPanel implements MapListener {
 	private void formMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseDragged
 		int row = evt.getY() / cellSize;
 		int col = evt.getX() / cellSize;
-		Point newPosition = new Point(col,row);
-		if (prePosition == null) prePosition = newPosition;
+		Point newPosition = new Point(col, row);
+		if (prePosition == null) {
+			prePosition = newPosition;
+		}
 		map.drawLine(prePosition, newPosition);
 //		map.insert( row, col);
 		prePosition = newPosition;
-		
 	}//GEN-LAST:event_formMouseDragged
 
 	private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
@@ -168,6 +158,5 @@ public class MapPanel extends javax.swing.JPanel implements MapListener {
 	}//GEN-LAST:event_formComponentResized
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
-	
 	Point prePosition;
 }

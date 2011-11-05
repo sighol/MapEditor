@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package core;
 
 import java.awt.Color;
@@ -38,11 +34,4 @@ public class Option {
 	public String toString() {
 		return description;
 	}
-	
-	
-	
-	
-	
-	
-	
 }

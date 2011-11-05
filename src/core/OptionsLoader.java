@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package core;
 
 import java.awt.Color;
@@ -20,19 +16,13 @@ public class OptionsLoader {
 
 	File file;
 	Scanner input;
-	
-	
-
 
 	public OptionsHolder open() throws FileNotFoundException {
 		openFileChooser();
 		return loadOptions(file);
-
 	}
 
 	public File openFileChooser() {
-
-
 		JFileChooser fc = new JFileChooser(getCurrentDirectory());
 		int returnVal = fc.showOpenDialog(null);
 		if (returnVal == JFileChooser.APPROVE_OPTION) {
@@ -47,7 +37,6 @@ public class OptionsLoader {
 	}
 
 	public OptionsHolder loadOptions(File file) throws FileNotFoundException, NullPointerException {
-
 		input = new Scanner(file);
 		List<Option> list = new ArrayList<Option>();
 
@@ -70,10 +59,8 @@ public class OptionsLoader {
 				description = prefs[1];
 				cs = prefs[2].split(",");
 			}
-			
 
 			color = new Color(Integer.valueOf(cs[0]), Integer.valueOf(cs[1]), Integer.valueOf(cs[2]));
-
 			
 			Option pref = new Option(value, description, color);
 			list.add(pref);
@@ -81,6 +68,5 @@ public class OptionsLoader {
 		
 		OptionsHolder holder = new OptionsHolder(list, file.getName());
 		return holder;
-
 	}
 }

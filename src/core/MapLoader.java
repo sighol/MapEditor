@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package core;
 
 import static core.FileHandler.openFileChooser;
@@ -69,18 +65,15 @@ public class MapLoader {
 				sl.add(line);
 				line = reader.readLine();
 			}
-
 			fetched = new char[sl.size()][cols];
 			for (int i = 0; i < sl.size(); i++) {
 				for (int j = 0; j < cols; j++) {
 					fetched[i][j] = sl.get(i).charAt(j);
 				}
 			}
-
 		} catch (IOException e) {
 			e.getStackTrace();
 		}
-
 	}
 
 	public void saveFile(char[][] map) {
@@ -127,7 +120,6 @@ public class MapLoader {
 		try {
 			fout = new FileWriter(file);
 			writer = new BufferedWriter(fout);
-
 
 			for (int i = 0; i < rows; i++) {
 				String s = String.valueOf(map[i]);

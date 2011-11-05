@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package core;
 
 import java.util.ArrayList;
@@ -19,7 +15,6 @@ public class OptionsHolder implements Iterable<Option> {
 	
 	public OptionsHolder() {
 		list = new ArrayList<Option>();
-		
 	}
 
 	public OptionsHolder(List<Option> list, String name) {
@@ -47,6 +42,4 @@ public class OptionsHolder implements Iterable<Option> {
 	public boolean add(Option e) {
 		return list.add(e);
 	}
-	
-	
 }

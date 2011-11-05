@@ -35,21 +35,18 @@ public class MainFrame extends javax.swing.JFrame implements MapListener {
 	private OptionsLoader optionsLoader = new OptionsLoader();
 	private OptionsHolder options;
 
-
-	/** Creates new form MainFrame */
 	public MainFrame(MapEditor editor) {
 		super("MapEditor");
 		this.editor = editor;
 		this.map = editor.getMap();
-		
-		
+
 		setLookAndFeel();
 		initComponents();
 		initOptionsBox();
 		initOptionsComboBox();
 
 		setVisible(true);
-		
+
 		levelTextPanel.setMapeditor(editor);
 
 		map.addMapEditorListener(this);
@@ -69,22 +66,15 @@ public class MainFrame extends javax.swing.JFrame implements MapListener {
 	}
 
 	private void initOptionsBox() {
-
 		options = editor.getOptions();
 		final Object[] optionArray = options.toArray();
-
 		listOptions.setListData(optionArray);
-
-
 		listOptions.addListSelectionListener(new ListSelectionListener() {
-
 			@Override
 			public void valueChanged(ListSelectionEvent e) {
 				updateCurrentValue();
 			}
 		});
-
-
 	}
 
 	public void updateCurrentValue() {
@@ -112,17 +102,10 @@ public class MainFrame extends javax.swing.JFrame implements MapListener {
 	}
 
 	public void initOptionsComboBox() {
-//		comboBoxOptionsChooser.removeAllItems();
-
-
-//		for (OptionsHolder options : optionsFolder) {
-		for (int i = 0; i < editor.getOptionsFolder().size(); i++) {
-			OptionsHolder options = editor.getOptionsFolder().get(i);
+		for (OptionsHolder options : editor.getOptionsFolder()) {
 			comboBoxOptionsChooser.addItem(options);
 		}
-
 		updateCurrentValue();
-
 	}
 
 	/** This method is called from within the constructor to
@@ -283,12 +266,12 @@ public class MainFrame extends javax.swing.JFrame implements MapListener {
     }// </editor-fold>//GEN-END:initComponents
 
 	private void menuOpenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuOpenActionPerformed
-			try {
-				mapLoader.openFile();
-			} catch (NotAMapFileException e) {
-				JOptionPane.showMessageDialog(this, "File is not a map file");
-			}
-		
+		try {
+			mapLoader.openFile();
+		} catch (NotAMapFileException e) {
+			JOptionPane.showMessageDialog(this, "File is not a map file");
+		}
+
 	}//GEN-LAST:event_menuOpenActionPerformed
 
 	private void menuSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSaveActionPerformed
@@ -313,7 +296,6 @@ public class MainFrame extends javax.swing.JFrame implements MapListener {
 			editor.setOptions(optionsLoader.open());
 			initOptionsBox();
 			updateCurrentValue();
-
 		} catch (FileNotFoundException ex) {
 			System.out.println("Fant ikke filen!");
 		} catch (NullPointerException ex) {
@@ -322,8 +304,6 @@ public class MainFrame extends javax.swing.JFrame implements MapListener {
 	}//GEN-LAST:event_jMenuItem1ActionPerformed
 
 	private void comboBoxOptionsChooserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxOptionsChooserActionPerformed
-
-
 		OptionsHolder holder = (OptionsHolder) comboBoxOptionsChooser.getSelectedItem();
 		editor.setOptions(holder);
 		initOptionsBox();

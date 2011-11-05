@@ -71,13 +71,10 @@ public class LevelTextPanel extends javax.swing.JPanel implements MapListener {
             			"Line: "+ (stringMap.size() + 1) + " has " + nextToken.length() + " lines\n" +
             			"Line: 1 has " + cols + " lines";
             	JOptionPane.showMessageDialog(this, message, "Illegal row lenght",0);
-
-            	
             	return;            	
             }
 			stringMap.add(nextToken);
         }
-		
 		map.setMap(stringMap);
 	}
 

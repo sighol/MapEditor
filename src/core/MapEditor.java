@@ -3,8 +3,6 @@ package core;
 import gui.MainFrame;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * 
@@ -13,13 +11,9 @@ import java.util.List;
 public class MapEditor {
 
 	public static final String OPTIONS_PATH = "options/";
-
 	private MainFrame frame;
-	
 	private OptionsHolder options;
-
 	Map map = new Map();
-
 	public Map getMap() {
 		return map;
 	}

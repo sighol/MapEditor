@@ -60,11 +60,6 @@ public class Map {
 		}
 	}
 
-	/**
-	 * @param args
-	 *            the command line arguments
-	 */
-
 	public void insert(int row, int col) {
 		if (row < 0 || col < 0 || row >= map.length || col >= map[0].length) {
 //			System.out.println("Map.insert(), out of range" + " row = " + row
