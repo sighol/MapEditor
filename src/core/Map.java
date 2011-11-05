@@ -58,7 +58,6 @@ public class Map {
 		for (MapListener m : listeners) {
 			m.mapChanged(this, property);
 		}
-
 	}
 
 	/**
@@ -68,8 +67,8 @@ public class Map {
 
 	public void insert(int row, int col) {
 		if (row < 0 || col < 0 || row >= map.length || col >= map[0].length) {
-			System.out.println("Map.insert(), out of range" + " row = " + row
-					+ " col = " + col);
+//			System.out.println("Map.insert(), out of range" + " row = " + row
+//					+ " col = " + col);
 			return;
 		}
 		map[row][col] = getSelectedOptionValue();
@@ -130,7 +129,6 @@ public class Map {
 		this.rows = rows;
 		this.cols = cols;
 		clear();
-
 	}
 
 	public String toString() {
@@ -141,7 +139,6 @@ public class Map {
 			}
 			out += "\n";
 		}
-
 		return out;
 	}
 
@@ -151,8 +148,8 @@ public class Map {
 		int row = from.y;
 		if (from.x == to.x) {			
 			while (true) {
-				System.out.println("Map.drawLine()," + " row = " + row + " col = "
-						+ col);
+//				System.out.println("Map.drawLine()," + " row = " + row + " col = "
+//						+ col);
 				insert(row,col);
 				if ( row  == to.y) break;
 				row += Math.signum(to.y - row);
@@ -160,13 +157,12 @@ public class Map {
 
 		} else if (from.y == to.y) {
 			while (true) {
-				System.out.println("Map.drawLine()," + " row = " + row + " col = "
-						+ col);
+//				System.out.println("Map.drawLine()," + " row = " + row + " col = "
+//						+ col);
 				insert(row,col);
 				if ( col  == to.x) break;
 				col += Math.signum(to.x - col);
 			}
 		}
 	}
-
 }
